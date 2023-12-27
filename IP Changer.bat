@@ -7,7 +7,9 @@ if /i "%UserInput%"=="yes" (
     netsh interface ip set dnsservers "Ethernet" static 8.8.8.8 validate=no
     netsh interface ipv4 add dnsserver "Ethernet" address=8.8.4.4 index=2 validate=no
     echo IP address changed successfully.
+	Pause
 ) else (
     echo Exiting without changing IP address.
+	Pause
     exit
 )
